@@ -13,4 +13,3 @@ dependencies:
 # Necessary for online atom viewing
   - nglview
   - ipywidgets
-  - IPython
