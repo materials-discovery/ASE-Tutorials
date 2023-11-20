@@ -9,8 +9,8 @@ from ase.io.trajectory import Trajectory
 from ase.optimize.bfgs import BFGS
 from ase.constraints import StrainFilter, UnitCellFilter
 import numpy as np
-from IPython.display import HTML
-from view_on_platform import atoms_to_html
+
+
 
 # Set up a crystal
 element_symbol = 'Cu'
