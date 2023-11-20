@@ -1,6 +1,5 @@
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UCL-DDMD/ASE-Tutorials-/main?urlpath=lab)
-
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UCL-DDMD/ASE-Tutorials-/main?urlpath=git-pull&repo=UCL-DDMD/ASE-Tutorials-&urlpath=tree/main&filepath=environments.yml)
 
 
 
