@@ -36,7 +36,7 @@ for atoms in traj[0:200]:
 # Here we want to open the md logfile as a pandas dataframe
 
 
-data = pd.read_csv("md.log", sep='\s{2,}',header=None, nrows=200, skiprows=[0])
+data = pd.read_csv("Cu_md.log", sep='\s{2,}',header=None, nrows=200, skiprows=[0])
 data = pd.DataFrame(data)
 
 

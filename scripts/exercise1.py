@@ -68,7 +68,7 @@ supercell.calc = EMT()
 MaxwellBoltzmannDistribution(supercell, temperature_K=300)
 
 # Run MD with constant energy using the VelocityVerlet algorithm.
-dyn = VelocityVerlet(supercell, 5 * units.fs)  # 5 fs time step.
+dyn = VelocityVerlet(supercell, 5 * units.fs, logfile='Cu_md.log')  # 5 fs time step.
 
 def printenergy(a=supercell):
     """Function to print the potential, kinetic, and total energy."""
