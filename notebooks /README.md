@@ -4,28 +4,14 @@
 
 
 
-
-
-
-Aluminum    FCC
-Cadmium     HCP
-Chromium    BCC
-Cobalt      HCP
-Copper      FCC
-Gold        FCC
-Iron        BCC
-Lead        FCC
-Magnesium   HCP
-Nickel      FCC
-Niobium     BCC
-Platinum    FCC
-Silver      FCC
-Titanium    HCP
-Vanadium    BCC
-Zinc        HCP
-Zirconium   HCP
-
-
+Metal       Unit Cell     Lattice constant (Å)
+Aluminum    FCC               4.046
+Copper      FCC               3.597
+Gold        FCC               4.065
+Nickel      FCC               3.499
+Silver      FCC               4.079
+Platinum    FCC               3.912
+Palladium   FCC               3.859
 
 
 
