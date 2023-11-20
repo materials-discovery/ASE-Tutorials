@@ -7,9 +7,19 @@ from ase.md.velocitydistribution import MaxwellBoltzmannDistribution
 from ase.md.verlet import VelocityVerlet
 from ase.io.trajectory import Trajectory
 from ase.optimize.bfgs import BFGS
-from ase.constraints import StrainFilter, UnitCellFilter
+from ase.constraints import StrainFilter
 import numpy as np
+from IPython import HTML
 
+# A function for viewing ASE output on JupyterLab
+def atoms_to_html(atoms):
+    'Return the html representation the atoms object as string'
+    from tempfile import NamedTemporaryFile
+    with NamedTemporaryFile('r+', suffix='.html') as ntf:
+        atoms.write(ntf.name, format='html')
+        ntf.seek(0)
+        html = ntf.read()
+    return html
 
 
 # Set up a crystal
@@ -28,8 +38,8 @@ logfile_filename = f'{element_symbol}_opt.log'
 opt = BFGS(constraints, trajectory=trajectory_filename, logfile=logfile_filename)
 opt.run(fmax=0.01)
 
-view_html = atoms_to_html(atoms)
-HTML(view_html)
+view_atoms = atoms_to_html(atoms)
+HTML(view_atoms)
 
 # After optimization, access the optimized lattice constant 'a'
 optimized_a = atoms.get_cell_lengths_and_angles()[0] * (2 ** 0.5)  # For a cubic cell, the first value represents 'a'
@@ -58,6 +68,10 @@ print(f"The packing efficiency of the optimized FCC unit cell is: {packing_densi
 # Now, let's create a supercell for molecular dynamics
 supercell_size = [[5, 0, 0], [0, 5, 0], [0, 0, 5]]  # Define the size of the supercell (5x5x5)
 supercell = make_supercell(atoms, supercell_size)
+
+view_supercell = atoms_to_html(atoms)
+HTML(view_supercell)
+
 supercell.calc = EMT()
 
 # Set the momenta corresponding to T=300K
@@ -84,3 +98,5 @@ dyn.attach(traj.write, interval=10)
 
 printenergy()
 dyn.run(200)
+
+
