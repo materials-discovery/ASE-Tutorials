@@ -9,12 +9,12 @@ from ase.io.trajectory import Trajectory
 from ase.optimize.bfgs import BFGS
 from ase.constraints import StrainFilter, UnitCellFilter
 import numpy as np
-
+from IPython.display import HTML
+from view_on_platform import atoms_to_html
 
 # Set up a crystal
 element_symbol = 'Cu'
 atoms = bulk(element_symbol, 'fcc', a=3.597)
-
 
 # Describe the interatomic interactions with the Effective Medium Theory
 atoms.calc = EMT()
@@ -27,6 +27,9 @@ logfile_filename = f'{element_symbol}_opt.log'
 
 opt = BFGS(constraints, trajectory=trajectory_filename, logfile=logfile_filename)
 opt.run(fmax=0.01)
+
+view_html = atoms_to_html(atoms)
+HTML(view_html)
 
 # After optimization, access the optimized lattice constant 'a'
 optimized_a = atoms.get_cell_lengths_and_angles()[0] * (2 ** 0.5)  # For a cubic cell, the first value represents 'a'
