@@ -28,6 +28,7 @@ logfile_filename = f'{element_symbol}_opt.log'
 opt = BFGS(constraints, trajectory=trajectory_filename, logfile=logfile_filename)
 opt.run(fmax=0.01)
 
+# Let's view the atoms
 view(atoms, viewer='ngl')
 
 # After optimization, access the optimized lattice constant 'a'
@@ -57,6 +58,9 @@ print(f"The packing efficiency of the optimized FCC unit cell is: {packing_densi
 # Now, let's create a supercell for molecular dynamics
 supercell_size = [[5, 0, 0], [0, 5, 0], [0, 0, 5]]  # Define the size of the supercell (5x5x5)
 supercell = make_supercell(atoms, supercell_size)
+
+# Let's view the supercell
+view(supercell, viewer='ngl')
 
 supercell.calc = EMT()
 

@@ -1,5 +1,13 @@
-
+# ASE tutorials - Molecular Dynamics 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UCL-DDMD/ASE-Tutorials-/main?urlpath=lab)
+
+
+In these tutorials, we'll run some molecular dynamics (MD) simulation on bulk metals. 
+
+## Exercise 1: 
+
+In this example, you'll see a demonstration of running NVE MD simulations on Cu. You will then need to run the example 
+yourself for FCC Al, Cu, Au, Ni, Ag, Pt and Pd. You can find the lattice constant (a) for each one in a table below:
 
 
 
@@ -12,6 +20,22 @@
 | Silver    | FCC       | 4.079                |
 | Platinum  | FCC       | 3.912                |
 | Palladium | FCC       | 3.859                |
+
+
+Some questions to think about:
+
+1) The lattice constants after the geometry optimisations are different to the experiment. Why? 
+2) How could I improve the accuracy of my calculation? 
+
+
+
+
+## Exericse 2: 
+
+Post-processing is an important step after performing any calculation (especially MD). 
+Here you'll extract the scientifically relevant information from your simulation and analyse your data. 
+
+
 
 
 
