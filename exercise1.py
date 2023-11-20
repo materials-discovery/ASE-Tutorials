@@ -1,3 +1,6 @@
+
+# Exercise 1 #
+
 """Demonstrates molecular dynamics with constant energy."""
 
 from ase import units
@@ -8,7 +11,7 @@ from ase.io.trajectory import Trajectory
 from ase.optimize.bfgs import BFGS
 from ase.constraints import StrainFilter
 
-# Use Asap for a huge performance increase if it is installed
+## Use Asap for a huge performance increase if it is installed ##
 use_asap = True
 
 if use_asap:
@@ -18,7 +21,7 @@ else:
     from ase.calculators.emt import EMT
     size = 3
 
-# Set up a crystal
+## Set up a crystal
 atoms = FaceCenteredCubic(directions=[[1, 0, 0], [0, 1, 0], [0, 0, 1]],
                           symbol="Cu",
                           size=(size, size, size),
