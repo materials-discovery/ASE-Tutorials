@@ -67,8 +67,10 @@ supercell.calc = EMT()
 # Set the momenta corresponding to T=300K
 MaxwellBoltzmannDistribution(supercell, temperature_K=300)
 
+md_logfile = f'{element_symbol}_md.log'
+
 # Run MD with constant energy using the VelocityVerlet algorithm.
-dyn = VelocityVerlet(supercell, 5 * units.fs, logfile='Cu_md.log')  # 5 fs time step.
+dyn = VelocityVerlet(supercell, 5 * units.fs, logfile='md_logfile')  # 5 fs time step.
 
 def printenergy(a=supercell):
     """Function to print the potential, kinetic, and total energy."""
@@ -81,7 +83,6 @@ def printenergy(a=supercell):
 dyn.attach(printenergy, interval=10)
 
 trajectory_filename = f'{element_symbol}_md.traj'
-logfile_filename = f'{element_symbol}_md.log'
 
 traj = Trajectory(trajectory_filename, 'w', supercell)
 dyn.attach(traj.write, interval=10)

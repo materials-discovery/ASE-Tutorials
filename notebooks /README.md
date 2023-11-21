@@ -27,10 +27,8 @@ Some questions to think about:
 1) What would happen with the simulation if we changed the convergence criteria (fmax)? 
 2) The lattice constants after the geometry optimisations are different to the experiment. Why? 
 3) Why do we perform MD simulations on supercells? What would happen if we did MD on the unit cell?
-4) What would happen if you were to change the unit cell to BCC? Does this change the packing efficiency. Why?
-   (Hint you'll have to modify the lattice constant)
-5) If you wre to change the Maxwell-Boltzmann distribution how would this change the simulation? 
-6) How can you improve the accuracy of your calculation, how would this effect the computational overhead? 
+4) If you wre to change the Maxwell-Boltzmann distribution how would this change the simulation? 
+5) How can you improve the accuracy of your calculation, how would this effect the computational overhead? 
 
 
 
@@ -46,6 +44,8 @@ the temperature for all your systems and then the total, kinetic, and potential 
 Here are some questions to consider:
 
 1) For the plot of temperature, what do you see in the early stages of the simulation? What does this mean?
+2) Looking at the plots for energy, what can you infer from this? 
+3) How would this change in an NVT simulation? 
 
 
 
@@ -62,11 +62,12 @@ Here are some questions to think about:
 1) What do the different contours in the 2D PES correspond to? What does this tell you about the Cu-Cu bonds?
 2) Similarly, what information can you deduce from the scatter plot? And what does this say about the nature of Cu-Cu bonds?
 
-Try increasing the number of MD steps for one of your system by a factor of 10 (This will take some time). 
+From your answers to 1) and 2) try simulating your systems as BCC instead of FCC
+Hint: You'll have to work out a new lattice constant, a
 
-4) How does the scatter plot change? 
-5) What patterns do you see and what does this correspond to? 
-6) Would you expect this to look different if you use a different physical theory? 
+3) First, run the simulation without a geometry optimisation. What packing efficiency do you get? Is this as expected? 
+4) Secondly, now run the MD with a geometry optimisation, does the packing efficiency change? What does this tell us? 
+
 
 
 

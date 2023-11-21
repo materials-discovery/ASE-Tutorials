@@ -61,7 +61,7 @@ print(df)
 plt.tricontourf(df["X"], df["Y"], df["Z"],levels=10, cmap='plasma')
 plt.colorbar()
 plt.ylabel('Cu0-Cu1/ Å')
-plt.xlabel('Cu0-Cu2/ Å')
+plt.xlabel('Cu1-Cu2/ Å')
 
 
 # ## Plot density of scatter points
