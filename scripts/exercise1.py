@@ -87,6 +87,6 @@ traj = Trajectory(trajectory_filename, 'w', supercell)
 dyn.attach(traj.write, interval=10)
 
 printenergy()
-dyn.run(200)
+dyn.run(1200)
 
 
