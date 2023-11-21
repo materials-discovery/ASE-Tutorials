@@ -24,10 +24,13 @@ yourself for FCC Al, Cu, Au, Ni, Ag, Pt and Pd. You can find the lattice constan
 
 Some questions to think about:
 
-1) The lattice constants after the geometry optimisations are different to the experiment. Why? 
-2) How could I improve the accuracy of my calculation? 
+1) What would happen with the simulation if we changed the convergence criteria (fmax)? 
+2) The lattice constants after the geometry optimisations are different to the experiment. Why? 
 3) Why do we perform MD simulations on supercells? What would happen if we did MD on the unit cell?
-4) What would happen if you were to change the unit cell to BCC? Does this change the packing efficiency. Why? 
+4) What would happen if you were to change the unit cell to BCC? Does this change the packing efficiency. Why?
+   (Hint you'll have to modify the lattice constant)
+5) If you wre to change the Maxwell-Boltzmann distribution how would this change the simulation? 
+6) How can you improve the accuracy of your calculation, how would this effect the computational overhead? 
 
 
 
@@ -43,7 +46,6 @@ the temperature for all your systems and then the total, kinetic, and potential 
 Here are some questions to consider:
 
 1) For the plot of temperature, what do you see in the early stages of the simulation? What does this mean?
-2) 
 
 
 
