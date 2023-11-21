@@ -70,7 +70,7 @@ MaxwellBoltzmannDistribution(supercell, temperature_K=300)
 md_logfile = f'{element_symbol}_md.log'
 
 # Run MD with constant energy using the VelocityVerlet algorithm.
-dyn = VelocityVerlet(supercell, 5 * units.fs, logfile='md_logfile')  # 5 fs time step.
+dyn = VelocityVerlet(supercell, 5 * units.fs, logfile=md_logfile)  # 5 fs time step.
 
 def printenergy(a=supercell):
     """Function to print the potential, kinetic, and total energy."""
