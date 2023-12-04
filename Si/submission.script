@@ -1,0 +1,8 @@
+export ESPRESSO_PSEUDO=$HOME/work2/teaching/Si/
+export ASE_ESPRESSO_COMMAND='mpirun -np 20 pw.x -in PREFIX.pwi > PREFIX.pwo'
+
+
+python3 kpoints.py
+#python3 exercise5.py
+#python3 exercise6.py
+#python3 exercise7.py
