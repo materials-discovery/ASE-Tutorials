@@ -21,6 +21,7 @@ input_data = {
         'occupations': 'smearing',
         'smearing': 'gaussian',
         'degauss': 0.01,
+        'input_dft': 'PBE',
     },
     'electrons': {
         'conv_thr': 1.0e-8,
@@ -54,6 +55,8 @@ plt.title('Electronic DOS of Silicon')
 
 # Plot Fermi level line at 0 energy
 fermi_level = calc.get_fermi_level()
+# For testing
+#print(fermi_level)
 plt.axvline(x=0, color='k', linestyle='--', label=f'Fermi Level: {fermi_level:.2f} eV')
 
 

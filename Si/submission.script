@@ -1,8 +1,21 @@
-export ESPRESSO_PSEUDO=$HOME/work2/teaching/Si/
-export ASE_ESPRESSO_COMMAND='mpirun -np 20 pw.x -in PREFIX.pwi > PREFIX.pwo'
+#!/bin/sh
 
+module load default-modules
+module -f unload compilers mpi gcc-libs
+module load beta-modules
+module load gcc-libs/10.2.0
+module load compilers/intel/2018/update3
+module load mpi/intel/2018/update3
+module load xorg-utils/X11R7.7
+module load gnuplot/5.0.1
+module load quantum-espresso/6.5-impi/thermo_pw-1.2.1/intel-2018
+module load python3/recommended
+
+export ESPRESSO_PSEUDO=$HOME/ASE-Tutorials/Si/pseudos
+export ASE_ESPRESSO_COMMAND="mpirun -np 20 pw.x -in PREFIX.pwi > PREFIX.pwo"
 
 python3 kpoints.py
-#python3 exercise5.py
+#python3 plot_kpoints.py
+#python3  exercise5.py
 #python3 exercise6.py
 #python3 exercise7.py

@@ -23,6 +23,7 @@ input_data = {
         'occupations': 'smearing',
         'smearing': 'mv',
         'degauss': 0.01,
+        'input_dft': 'PBE',
     },
     'electrons': {
         'conv_thr': 1.0e-8,
