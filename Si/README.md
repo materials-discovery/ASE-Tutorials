@@ -60,5 +60,5 @@ Here are some questions to think about whilst performing your calculation:
 5) What value is the fermi level from our plots? Does this make sense?
 6) Does our DOS looks like our reference plots? What could we do to improve our method?
 
-![alt text](https://github.com/UCL-DDMD/ASE-Tutorials/tree/main/Si/Reference_DOS.png)
+![alt text](https://github.com/UCL-DDMD/ASE-Tutorials/blob/main/Si/Reference_DOS.png)
 *Reference DOS (PBE with QE): https://pranabdas.github.io/espresso/hands-on/dos* 
