@@ -59,3 +59,6 @@ Here are some questions to think about whilst performing your calculation:
 4) What information does the density of states provide us? 
 5) What value is the fermi level from our plots? Does this make sense?
 6) Does our DOS looks like our reference plots? What could we do to improve our method?
+
+![alt text](https://github.com/UCL-DDMD/ASE-Tutorials/tree/main/Si/Reference_DOS.png)
+*Reference DOS (PBE with QE): https://pranabdas.github.io/espresso/hands-on/dos* 

@@ -11,7 +11,7 @@ module load gnuplot/5.0.1
 module load quantum-espresso/6.5-impi/thermo_pw-1.2.1/intel-2018
 module load python3/recommended
 
-export ESPRESSO_PSEUDO=$HOME/ASE-Tutorials/Si/pseudos
+export ESPRESSO_PSEUDO=$HOME/ASE-Tutorials/Si/
 export ASE_ESPRESSO_COMMAND="mpirun -np 20 pw.x -in PREFIX.pwi > PREFIX.pwo"
 
 python3 kpoints.py
